@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: hsl(270, 20%, 96%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.purple-top {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 500px;
+  height: 600px;
+  border-radius: 0 0 300px 0;
+  background: linear-gradient(180deg, hsl(276, 55%, 52%), hsl(293, 100%, 63%));
+}
+
+.gray-down {
+  position: fixed;
+  bottom: -100px;
+  right: -100px;
+  width: 500px;
+  height: 600px;
+  z-index: -1;
+  border-radius: 300px 0 0 0;
+  background: hsl(0, 0%, 93%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.mobile-section {
+  width: 300px;
+  background: hsl(270, 20%, 96%);
+  border-radius: 30px;
+  border: 10px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1rem;
+  background: linear-gradient(90deg, hsl(276, 55%, 52%), hsl(293, 100%, 63%));
+  color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.chat-header .profile {
+  width: 200px;
+}
+
+.chat-header img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.dots {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+  justify-content: flex-end;
+}
+
+.dots span {
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile h2 {
+  font-size: 0.8rem;
+}
+
+.profile p {
+  font-size: 0.6rem;
+  opacity: 0.8;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem;
+}
+
+.message {
+  max-width: 70%;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.7rem;
+}
+
+.left {
+  background: hsl(275, 100%, 93%);
+  color: hsl(276, 55%, 52%);
+  align-self: flex-start;
+}
+
+.right {
+  background: white;
+  color: hsl(0, 0%, 40%);
+  align-self: flex-end;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.left,
+.price {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.images {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.images img {
+  width: 40px;
+  border-radius: 6px;
+}
+
+.price {
+  background: linear-gradient(90deg, hsl(276, 55%, 52%), hsl(293, 100%, 63%));
+  color: white;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.price-tag {
+  font-weight: bold;
+}
+
+.message-input {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: white;
+}
+
+.message-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  background: hsl(270, 20%, 96%);
+}
+
+.send-btn {
+  border: none;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(276, 100%, 42%),
+    hsl(256, 100%, 17%)
+  );
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.back-btn {
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.6;
+  background-color: transparent;
+}
+
+.description {
+  max-width: 400px;
+  text-align: center;
+}
+
+.description h1 {
+  color: hsl(271, 36%, 24%);
+  margin-bottom: 1rem;
+}
+
+.description p {
+  color: hsl(270, 7%, 64%);
+  line-height: 1.6;
+}
+
+.attribution {
+  font-size: 15px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(247, 100%, 50%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: hsl(279, 100%, 28%);
+  text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .description {
+    text-align: left;
+  }
+}
